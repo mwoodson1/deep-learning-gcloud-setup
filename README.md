@@ -25,13 +25,19 @@ If you have not already, sign up for Google Cloud on the [homepage](https://clou
 After clicking the menu in the top left and navigating to "Compute Engine" you should be greeted with 
 the following 
 
+![](images/1.png)
+
 Click "Create" and you should then be greeted with a menu similar to the following
+
+![](images/2.png)
 
 It is in this menu that you can configure all of the details of your instance. You can either choose a pre-defined instance type or choose the amount of CPU cores, RAM, number of GPU's, and storage manually. The above setup is suitable for most deep
 learning tasks so we will stick with that. Since I will be using Tensorflow and other libraries primiarly supported by Ubuntu, I will be using that as my OS but this is also something you can configure.
 
 Once you are done configuring your instance scrool down and press create. After some initial setup time you should be greeted 
 by the following screen.
+
+![](images/5.png)
 
 From here you can turn off your instance, delete it, or connect to it via ssh. It is possible to use your own ssh client 
 to connect to your instance but the built in Gcloud ssh client works just as well and has
