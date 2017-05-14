@@ -1,4 +1,9 @@
 # What is Google Cloud
+Google Cloud is a clout computing platform that offers hosting on the same supporting
+infrastructure that is used internally at Google. In addition to hosting, Google Cloud
+provides a suite of services useful for developers such as cloud storage, dats storage,
+computer vision API's, translation API's, and many other tools. Two tools of particular
+use for deep learning are Google Cloud's compute engine and Cloud ML service. 
 
 # Who should use it
 Google Cloud does provide valuable cloud compute services but for deep learning,
@@ -93,3 +98,37 @@ your install is correct. Do make sure to stop your instance when you are done us
 will be charged by the minute. I have added a script that performs all of the installation I 
 have done above so that you can simply copy the script to your new instance and install everything
 you need.
+
+
+# Using Jupyter on Google Cloud
+[Jupyter](http://jupyter.org/) is an excelent tool for data science in general as it provides
+a easy to use notebook format for coding in your browser. It is great for quick experimentation,
+visualizations, and interactive data science. If you are using or wish to use Jupyter on
+Google Cloud it is actually extremely easy!
+
+## Step 1: Install Jupyter
+You can easily install Jupyter with pip
+
+```
+sudo pip install jupyter
+```
+
+## Step 2: Start Jupyter Server Side
+Since Jupyter notebooks run in your browser you will need to first start the server on your
+virtual machine before connecting on your local machine. On your virtual machine simply run
+the following command 
+
+```
+jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser
+```
+
+## Step 3: Connect to Your Notebook Server
+Once you have run that command you should  see URL to connect to in your terminal 
+of the form *http://0.0.0.0:8888/?token=%%%%%*. On your local machine you should go to that
+link but replace *0.0.0.0* with the external IP address of your virtual instance.
+You can find your external IP address on the compute engine VM instances page and is 
+shown in the below screenshot.
+
+![](images/7.png)
+
+From there you can start up a new notebook and begin your experimentation!
